@@ -1,0 +1,1 @@
+{"name":"claim_status_update","language":"en","category":"UTILITY","components":[{"type":"BODY","text":"Update on your claim {{1}}: the status is now {{2}}. Next step: {{3}}. Reply on this chat if you have any questions.","example":{"body_text":[["CLM-1043","Survey scheduled","surveyor visit tomorrow"]]}}]}

@@ -1,0 +1,28 @@
+# Secrets and local config: never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+awsenv.sh
+
+# Python / CDK
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+cdk.out/
+node_modules/
+
+# Personal test media
+*.ogg
+*.m4a
+*.mp3
+*.wav
+*.jpg
+*.jpeg
+!docs/**/*.png
+.DS_Store
+build/

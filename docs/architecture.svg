@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1690" height="945" viewBox="0 0 1690 945" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+  <marker id="arrowStart" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+  <style>
+    .h1{font-size:26px;font-weight:700;fill:#0f172a}
+    .h2{font-size:13px;fill:#475569}
+    .zone{font-size:12px;font-weight:700;letter-spacing:.06em;fill:#475569}
+    .title{font-size:14px;font-weight:700}
+    .sub{font-size:12px;fill:#334155}
+    .mono{font-size:12px;fill:#334155;font-family:Consolas, monospace}
+    .label{font-size:11px;fill:#475569}
+    .step{font-size:11px;font-weight:700;fill:#ffffff}
+    .b{font-weight:700}
+  </style>
+</defs>
+<rect width="1690" height="945" fill="#ffffff"/>
+<text x="30" y="40" class="h1">ClaimBolo · architecture</text>
+<text x="30" y="62" class="h2">WhatsApp voice-first motor claims agent · AWS End User Messaging Social + Amazon SES · us-east-1</text>
+<rect x="30" y="92" width="300" height="548" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+<text x="44" y="113" text-anchor="start" class="zone">CUSTOMER CHANNELS · AWS CDS</text>
+<rect x="360" y="92" width="340" height="548" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+<text x="374" y="113" text-anchor="start" class="zone">INGESTION</text>
+<rect x="740" y="92" width="520" height="548" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+<text x="1246" y="113" text-anchor="end" class="zone">AGENT ON AMAZON BEDROCK AGENTCORE</text>
+<rect x="1290" y="92" width="370" height="308" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+<text x="1304" y="113" text-anchor="start" class="zone">DATA AND RULES</text>
+<rect x="30" y="660" width="1630" height="180" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="6 5"/>
+<text x="44" y="681" text-anchor="start" class="zone">HUMAN IN THE LOOP AND PROACTIVE UPDATES</text>
+<rect x="55" y="125" width="180" height="85" rx="9" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+<rect x="55" y="125" width="6" height="85" rx="3" fill="#334155"/>
+<text x="71" y="147" class="title" fill="#0f172a">Customer</text>
+<text x="71" y="165" class="sub">WhatsApp voice notes,</text>
+<text x="71" y="181" class="sub">text and photos</text>
+<text x="71" y="197" class="sub">6 Indian languages</text>
+<rect x="55" y="260" width="250" height="110" rx="9" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="55" y="260" width="6" height="110" rx="3" fill="#0f766e"/>
+<text x="71" y="282" class="title" fill="#0f3d38">AWS End User Messaging</text>
+<text x="71" y="300" class="sub">Social (WhatsApp Business)</text>
+<text x="71" y="316" class="sub">SendWhatsAppMessage</text>
+<text x="71" y="332" class="sub">GetWhatsAppMessageMedia</text>
+<rect x="55" y="495" width="250" height="95" rx="9" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="55" y="495" width="6" height="95" rx="3" fill="#0f766e"/>
+<text x="71" y="517" class="title" fill="#0f3d38">Amazon SES</text>
+<text x="71" y="535" class="sub">SendEmail (sesv2)</text>
+<text x="71" y="551" class="sub">claim summary to the customer</text>
+<text x="71" y="567" class="sub">alert to the adjuster</text>
+<path d="M120,210 V258" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M180,260 V212" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="188" y="240" text-anchor="start" class="label">reply</text>
+<circle cx="100" cy="235" r="10" fill="#0f172a"/>
+<text x="100" y="239" text-anchor="middle" class="step">1</text>
+<rect x="380" y="125" width="300" height="55" rx="9" fill="#fdf2f8" stroke="#be185d" stroke-width="1.6"/>
+<rect x="380" y="125" width="6" height="55" rx="3" fill="#be185d"/>
+<text x="396" y="147" class="title" fill="#500724">Amazon SNS</text>
+<text x="396" y="165" class="sub">WhatsApp event topic</text>
+<rect x="380" y="205" width="300" height="70" rx="9" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<rect x="380" y="205" width="6" height="70" rx="3" fill="#c2410c"/>
+<text x="396" y="227" class="title" fill="#4a1d06">Lambda · inbound</text>
+<text x="396" y="245" class="sub">de-duplicate by message id</text>
+<text x="396" y="261" class="sub">store the message, fetch media</text>
+<rect x="380" y="300" width="300" height="55" rx="9" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="380" y="300" width="6" height="55" rx="3" fill="#1d4ed8"/>
+<text x="396" y="322" class="title" fill="#172554">Amazon S3 · media</text>
+<text x="396" y="340" class="sub">KMS-encrypted, private, 30-day expiry</text>
+<rect x="380" y="380" width="300" height="65" rx="9" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+<rect x="380" y="380" width="6" height="65" rx="3" fill="#6d28d9"/>
+<text x="396" y="402" class="title" fill="#2e1065">Amazon Transcribe</text>
+<text x="396" y="420" class="sub">automatic language detection</text>
+<text x="396" y="436" class="sub">ta · hi · en · te · ml · kn</text>
+<rect x="380" y="470" width="300" height="50" rx="9" fill="#fdf2f8" stroke="#be185d" stroke-width="1.6"/>
+<rect x="380" y="470" width="6" height="50" rx="3" fill="#be185d"/>
+<text x="396" y="492" class="title" fill="#500724">Amazon EventBridge</text>
+<text x="396" y="510" class="sub">transcription finished</text>
+<rect x="380" y="545" width="300" height="60" rx="9" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<rect x="380" y="545" width="6" height="60" rx="3" fill="#c2410c"/>
+<text x="396" y="567" class="title" fill="#4a1d06">Lambda · transcribe-complete</text>
+<text x="396" y="585" class="sub">adds the transcript to the conversation</text>
+<path d="M305,300 H345 V152 H378" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<circle cx="345" cy="226" r="10" fill="#0f172a"/>
+<text x="345" y="230" text-anchor="middle" class="step">2</text>
+<path d="M530,180 V203" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M530,275 V298" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="540" y="292" text-anchor="start" class="label">photos, voice notes</text>
+<path d="M530,355 V378" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="540" y="372" text-anchor="start" class="label">voice notes</text>
+<circle cx="505" cy="367" r="10" fill="#0f172a"/>
+<text x="505" y="371" text-anchor="middle" class="step">3</text>
+<path d="M530,445 V468" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M530,520 V543" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M680,240 H712 V150 H763" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M680,575 H726 V178 H763" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="765" y="125" width="215" height="85" rx="9" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<rect x="765" y="125" width="6" height="85" rx="3" fill="#c2410c"/>
+<text x="781" y="147" class="title" fill="#4a1d06">Lambda · agent</text>
+<text x="781" y="165" class="sub">conversation history,</text>
+<text x="781" y="181" class="sub">debounce, reply buttons</text>
+<rect x="1020" y="125" width="215" height="85" rx="9" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+<rect x="1020" y="125" width="6" height="85" rx="3" fill="#6d28d9"/>
+<text x="1036" y="147" class="title" fill="#2e1065">AgentCore Memory</text>
+<text x="1036" y="165" class="sub">customer preferences</text>
+<text x="1036" y="181" class="sub">session summaries</text>
+<path d="M982,167 H1018" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)" marker-start="url(#arrowStart)"/>
+<text x="1000" y="160" text-anchor="middle" class="label"></text>
+<rect x="765" y="240" width="470" height="290" rx="10" fill="#faf5ff" stroke="#6d28d9" stroke-width="2.4"/>
+<text x="781" y="263" class="title" fill="#2e1065">Amazon Bedrock AgentCore Runtime</text>
+<text x="781" y="281" class="sub">src/main.py · Guardrails + tool-use loop + claim tools</text>
+<rect x="785" y="295" width="210" height="60" rx="9" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+<rect x="785" y="295" width="6" height="60" rx="3" fill="#6d28d9"/>
+<text x="801" y="317" class="title" fill="#2e1065">Bedrock Guardrails</text>
+<text x="801" y="335" class="sub">input and output checks</text>
+<rect x="1010" y="295" width="205" height="60" rx="9" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+<rect x="1010" y="295" width="6" height="60" rx="3" fill="#6d28d9"/>
+<text x="1026" y="317" class="title" fill="#2e1065">Amazon Bedrock</text>
+<text x="1026" y="335" class="sub">tool use and photo vision</text>
+<rect x="785" y="370" width="430" height="145" rx="9" fill="#ffffff" stroke="#64748b" stroke-width="1.6"/>
+<rect x="785" y="370" width="6" height="145" rx="3" fill="#64748b"/>
+<text x="801" y="392" class="title" fill="#1e293b">Claim tools (bound to the sender's number)</text>
+<text x="801" y="410" class="sub">lookup_policy · save_claim_facts · find_missing_items</text>
+<text x="801" y="426" class="sub">assess_photo (vision on S3 media) · check_coverage</text>
+<text x="801" y="442" class="sub">create_claim · get_claim_status · escalate_to_adjuster</text>
+<text x="801" y="458" class="sub">set_language</text>
+<text x="801" y="474" class="sub">every tool call is written to the audit table</text>
+<path d="M995,325 H1008" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M870,210 V238" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="880" y="229" text-anchor="start" class="label">InvokeAgentRuntime</text>
+<circle cx="850" cy="225" r="10" fill="#0f172a"/>
+<text x="850" y="229" text-anchor="middle" class="step">4</text>
+<rect x="765" y="550" width="470" height="55" rx="9" fill="#ffffff" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5 4"/>
+<rect x="765" y="550" width="6" height="55" rx="3" fill="#64748b"/>
+<text x="781" y="572" class="title" fill="#1e293b">Fallback</text>
+<text x="781" y="590" class="sub">if the runtime call fails, the agent Lambda runs the same agent code</text>
+<path d="M830,125 V80 H290 V258" fill="none" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="560" y="75" text-anchor="middle" class="label">SendWhatsAppMessage · replies, buttons, templates</text>
+<circle cx="420" cy="80" r="10" fill="#0f172a"/>
+<text x="420" y="84" text-anchor="middle" class="step">6</text>
+<path d="M785,500 H752 V628 H180 V592" fill="none" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow)"/>
+<text x="470" y="622" text-anchor="middle" class="label">SendEmail · claim registered</text>
+<circle cx="330" cy="628" r="10" fill="#0f172a"/>
+<text x="330" y="632" text-anchor="middle" class="step">6</text>
+<rect x="1310" y="125" width="330" height="135" rx="9" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="1310" y="125" width="6" height="135" rx="3" fill="#1d4ed8"/>
+<text x="1326" y="147" class="title" fill="#172554">Amazon DynamoDB (KMS)</text>
+<text x="1326" y="165" class="sub">policies (mock policy system)</text>
+<text x="1326" y="181" class="sub">claims (+ phone index)</text>
+<text x="1326" y="197" class="sub">conversations</text>
+<text x="1326" y="213" class="sub">audit (every tool call and status change)</text>
+<text x="1326" y="229" class="sub">processed-messages (de-duplication, TTL)</text>
+<rect x="1310" y="285" width="330" height="95" rx="9" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<rect x="1310" y="285" width="6" height="95" rx="3" fill="#c2410c"/>
+<text x="1326" y="307" class="title" fill="#4a1d06">Coverage rules engine</text>
+<text x="1326" y="325" class="sub">deterministic: in force, cover type,</text>
+<text x="1326" y="341" class="sub">deductible, escalation triggers</text>
+<text x="1326" y="357" class="sub">the model only explains the result</text>
+<path d="M1215,400 H1265 V192 H1308" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M1215,470 H1278 V332 H1308" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<circle cx="1265" cy="296" r="10" fill="#0f172a"/>
+<text x="1265" y="300" text-anchor="middle" class="step">5</text>
+<rect x="1290" y="420" width="370" height="220" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<text x="1306" y="447" class="zone">FLOW</text>
+<circle cx="1316" cy="474" r="10" fill="#0f172a"/>
+<text x="1316" y="478" text-anchor="middle" class="step">1</text>
+<text x="1334" y="478" class="sub">Customer sends a voice note, text or photo</text>
+<circle cx="1316" cy="497" r="10" fill="#0f172a"/>
+<text x="1316" y="501" text-anchor="middle" class="step">2</text>
+<text x="1334" y="501" class="sub">WhatsApp event reaches SNS and the inbound Lambda</text>
+<circle cx="1316" cy="520" r="10" fill="#0f172a"/>
+<text x="1316" y="524" text-anchor="middle" class="step">3</text>
+<text x="1334" y="524" class="sub">Media is stored in S3; voice is transcribed</text>
+<circle cx="1316" cy="543" r="10" fill="#0f172a"/>
+<text x="1316" y="547" text-anchor="middle" class="step">4</text>
+<text x="1334" y="547" class="sub">Agent Lambda calls AgentCore Runtime</text>
+<circle cx="1316" cy="566" r="10" fill="#0f172a"/>
+<text x="1316" y="570" text-anchor="middle" class="step">5</text>
+<text x="1334" y="570" class="sub">Tools read data, apply rules, check photos</text>
+<circle cx="1316" cy="589" r="10" fill="#0f172a"/>
+<text x="1316" y="593" text-anchor="middle" class="step">6</text>
+<text x="1334" y="593" class="sub">Reply on WhatsApp; claim email through SES</text>
+<circle cx="1316" cy="612" r="10" fill="#0f172a"/>
+<text x="1316" y="616" text-anchor="middle" class="step">7</text>
+<text x="1334" y="616" class="sub">Adjuster acts; customer gets a proactive update</text>
+<rect x="55" y="695" width="290" height="120" rx="9" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+<rect x="55" y="695" width="6" height="120" rx="3" fill="#334155"/>
+<text x="71" y="717" class="title" fill="#0f172a">Adjuster page</text>
+<text x="71" y="735" class="sub">Lambda function URL, key in Secrets Manager</text>
+<text x="71" y="751" class="sub">case file: facts, photos, coverage,</text>
+<text x="71" y="767" class="sub">conversation and audit trail</text>
+<text x="71" y="783" class="sub">humans decide; the agent prepares</text>
+<rect x="420" y="725" width="260" height="60" rx="9" fill="#fdf2f8" stroke="#be185d" stroke-width="1.6"/>
+<rect x="420" y="725" width="6" height="60" rx="3" fill="#be185d"/>
+<text x="436" y="747" class="title" fill="#500724">Amazon EventBridge</text>
+<text x="436" y="765" class="sub">ClaimStatusChanged (survey scheduled)</text>
+<rect x="765" y="695" width="470" height="120" rx="9" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<rect x="765" y="695" width="6" height="120" rx="3" fill="#c2410c"/>
+<text x="781" y="717" class="title" fill="#4a1d06">Lambda · proactive</text>
+<text x="781" y="735" class="sub">customer wrote in the last 23 hours → free-text WhatsApp</text>
+<text x="781" y="751" class="sub">otherwise → approved WhatsApp template</text>
+<text x="781" y="767" class="sub">WhatsApp send fails → email through SES</text>
+<rect x="1290" y="705" width="350" height="45" rx="9" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="1290" y="705" width="6" height="45" rx="3" fill="#0f766e"/>
+<text x="1306" y="727" class="title" fill="#0f3d38">WhatsApp update · EUM Social</text>
+<rect x="1290" y="765" width="350" height="45" rx="9" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="1290" y="765" width="6" height="45" rx="3" fill="#0f766e"/>
+<text x="1306" y="787" class="title" fill="#0f3d38">Email fallback · Amazon SES</text>
+<path d="M345,755 H418" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<circle cx="382" cy="740" r="10" fill="#0f172a"/>
+<text x="382" y="744" text-anchor="middle" class="step">7</text>
+<path d="M680,755 H763" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M1235,727 H1288" fill="none" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow)"/>
+<path d="M1235,787 H1288" fill="none" stroke="#0f766e" stroke-width="1.8" marker-end="url(#arrow)"/>
+<rect x="30" y="860" width="1630" height="70" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+<text x="46" y="884" class="sub"><tspan class="b">Cross-cutting:</tspan> AWS CDK (one stack, one-command deploy) · customer-managed AWS KMS key · least-privilege IAM role per function · Amazon CloudWatch Logs · every resource tagged Project / Owner / Purpose / ExpiresAfter</text>
+<rect x="46" y="899" width="16" height="16" rx="3" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<text x="70" y="912" class="sub">AWS CDS service</text>
+<rect x="236" y="899" width="16" height="16" rx="3" fill="#fff7ed" stroke="#c2410c" stroke-width="1.6"/>
+<text x="260" y="912" class="sub">Compute and logic</text>
+<rect x="426" y="899" width="16" height="16" rx="3" fill="#f5f3ff" stroke="#6d28d9" stroke-width="1.6"/>
+<text x="450" y="912" class="sub">AI services</text>
+<rect x="616" y="899" width="16" height="16" rx="3" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="640" y="912" class="sub">Data</text>
+<rect x="806" y="899" width="16" height="16" rx="3" fill="#fdf2f8" stroke="#be185d" stroke-width="1.6"/>
+<text x="830" y="912" class="sub">Events</text>
+<rect x="996" y="899" width="16" height="16" rx="3" fill="#f8fafc" stroke="#334155" stroke-width="1.6"/>
+<text x="1020" y="912" class="sub">People</text>
+</svg>

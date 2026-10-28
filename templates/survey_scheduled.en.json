@@ -1,0 +1,1 @@
+{"name":"survey_scheduled","language":"en","category":"UTILITY","components":[{"type":"BODY","text":"Your surveyor visit for claim {{1}} is scheduled for {{2}} at {{3}}. Please keep your vehicle and documents ready. Reply on this chat if you need to change the time.","example":{"body_text":[["CLM-1043","24 Oct","10:00 AM"]]}}]}

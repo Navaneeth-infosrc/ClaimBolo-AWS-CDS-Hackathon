@@ -1,0 +1,1 @@
+{"name":"docs_reminder","language":"en","category":"UTILITY","components":[{"type":"BODY","text":"Reminder for claim {{1}}: we still need the following items: {{2}}. Please send them on this chat to continue your claim.","example":{"body_text":[["CLM-1043","number plate photo, driving licence"]]}}]}

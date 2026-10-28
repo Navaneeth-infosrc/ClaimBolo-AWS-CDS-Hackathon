@@ -1,0 +1,1 @@
+{"name":"claim_registered","language":"en","category":"UTILITY","components":[{"type":"BODY","text":"Hello {{1}}, your motor claim {{2}} has been registered. A surveyor will contact you within 1 working day. Reply on this chat anytime to check the status of your claim.","example":{"body_text":[["Murugan","CLM-1043"]]}}]}
